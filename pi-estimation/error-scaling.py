@@ -28,13 +28,14 @@ def estimate_pi(num_points):
 # time
 
 # Let's take steps of 10k up to 10M
-points = arange(10000, 10010000, 10000)
+#points = arange(10000, 10010000, 10000)
+points = logspace(4, 7, 1000)
 print points
 x = []
 y = []
 for i in points:
     num_points, val = estimate_pi(i)
-    print val
+    print i, val
     x.append(num_points)
     y.append(val)
 
